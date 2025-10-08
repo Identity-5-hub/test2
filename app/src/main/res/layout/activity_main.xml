@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- 第一行矩形方框 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/firstRowContainer"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:background="@drawable/rectangle_border"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <!-- 第一张图片 -->
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_placeholder"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/image2"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            android:layout_marginTop="16dp" />
+
+        <!-- 第一个文字 -->
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Space Stations"
+            android:textSize="10sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@+id/image1"
+            app:layout_constraintStart_toStartOf="@+id/image1"
+            app:layout_constraintEnd_toEndOf="@+id/image1"
+            android:layout_marginTop="8dp" />
+
+        <!-- 第二张图片 -->
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/rocket_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image1"
+            app:layout_constraintEnd_toStartOf="@+id/image3"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            android:layout_marginTop="16dp" />
+
+        <!-- 第二个文字 -->
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flights"
+            android:textSize="10sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@+id/image2"
+            app:layout_constraintStart_toStartOf="@+id/image2"
+            app:layout_constraintEnd_toEndOf="@+id/image2"
+            android:layout_marginTop="8dp" />
+
+        <!-- 第三张图片 -->
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/rover_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            android:layout_marginTop="16dp" />
+
+        <!-- 第三个文字 -->
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rovers"
+            android:textSize="10sp"
+            android:textColor="#000000"
+            app:layout_constraintTop_toBottomOf="@+id/image3"
+            app:layout_constraintStart_toStartOf="@+id/image3"
+            app:layout_constraintEnd_toEndOf="@+id/image3"
+            android:layout_marginTop="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 第二行左边绿色方框 -->
+    <TextView
+        android:id="@+id/leftGreenBox"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:background="#FF4CAF50"
+        android:gravity="center"
+        android:text="DCA"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/firstRowContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/centerImage"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="0dp" />
+
+    <!-- 第二行右边绿色方框 -->
+    <TextView
+        android:id="@+id/rightGreenBox"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#FF4CAF50"
+        android:gravity="center"
+        android:text="MARS"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/firstRowContainer"
+        app:layout_constraintStart_toEndOf="@+id/centerImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="30dp" />
+
+    <!-- 中间覆盖图片 -->
+    <ImageView
+        android:id="@+id/centerImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/double_arrows"
+        app:layout_constraintTop_toTopOf="@+id/leftGreenBox"
+        app:layout_constraintBottom_toBottomOf="@+id/leftGreenBox"
+        app:layout_constraintStart_toEndOf="@+id/leftGreenBox"
+        app:layout_constraintEnd_toStartOf="@+id/rightGreenBox"
+        android:layout_marginStart="-10dp"
+        android:layout_marginEnd="-10dp"
+        android:elevation="10dp" />
+
+    <!-- 第三行橙色方框 -->
+    <TextView
+        android:id="@+id/orangeBox1"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#FFFF9800"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="One Way"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/centerImage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp" />
+
+    <!-- 白色圆形 -->
+    <View
+        android:id="@+id/whiteCircle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/white_circle"
+        app:layout_constraintTop_toTopOf="@+id/orangeBox1"
+        app:layout_constraintBottom_toBottomOf="@+id/orangeBox1"
+        app:layout_constraintEnd_toEndOf="@+id/orangeBox1"
+        android:layout_marginEnd="10dp" />
+
+    <!-- 第四行橙色方框 -->
+    <TextView
+        android:id="@+id/orangeBox2"
+        android:layout_width="85dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#FFFF9800"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="1 Traveller"
+        android:textColor="#FFFFFF"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/orangeBox1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp" />
+
+    <!-- 第五行：两张图片居中紧邻，小图片对齐大图片中间 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fifthRowContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/orangeBox2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 右边大图片 -->
+        <ImageView
+            android:id="@+id/largeImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/galaxy"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- 左边小图片 - 对齐大图片的垂直中间 -->
+        <ImageView
+            android:id="@+id/smallImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/rocket_icon"
+            app:layout_constraintTop_toTopOf="@+id/largeImage"
+            app:layout_constraintBottom_toBottomOf="@+id/largeImage"
+            app:layout_constraintEnd_toStartOf="@+id/largeImage"
+            android:layout_marginEnd="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 第六行：底部绿色方框 -->
+    <TextView
+        android:id="@+id/bottomGreenBox"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="#FF4CAF50"
+        android:gravity="center"
+        android:text="DEPART"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
